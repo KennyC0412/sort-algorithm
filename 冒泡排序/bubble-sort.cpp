@@ -33,9 +33,7 @@ int main()
 	std::vector<int> data;
 	int input;
 	while (std::cin >> input)
-	{
 		data.push_back(input);
-	}
 	bubbleSort(data);
 	std::for_each(data.begin(), data.end(), []( int ret) {std::cout << ret << ' '; });
 	return 0;
