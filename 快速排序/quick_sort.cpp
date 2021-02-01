@@ -1,4 +1,4 @@
-//空间复杂度O(n) 平均时间复杂度O(nlogn) 最坏O(n^2)(逆序或正序)
+//空间复杂度O(logn) 平均时间复杂度O(nlogn) 最坏O(n^2)(逆序或正序)
 #include <iostream>
 #include <vector>
 #include <algorithm>
