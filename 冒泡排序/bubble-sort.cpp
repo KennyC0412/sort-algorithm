@@ -15,7 +15,7 @@ void bubbleSort(std::vector<int>& data)
 	if (length < 2)
 		return;
 	for (int i = 0; i < length-1; ++i) {
-		for (int j = 0; j < length-1; ++j) {
+		for (int j = 0; j < length-1-i; ++j) {
 			if (data[j] > data[j + 1]) {
 				swapFlag |= 0x01;
 				swap(data[j], data[j + 1]);
@@ -31,9 +31,10 @@ void bubbleSort(std::vector<int>& data)
 int main() 
 {
 	std::vector<int> data;
-	int input;
-	while (std::cin >> input)
-		data.push_back(input);
+	srand(time(0));
+	for (int i = 0; i < 50; ++i) {
+		data.push_back(rand() % 100);
+	}
 	bubbleSort(data);
 	std::for_each(data.begin(), data.end(), []( int ret) {std::cout << ret << ' '; });
 	return 0;
